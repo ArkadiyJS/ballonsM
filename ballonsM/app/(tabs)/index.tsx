@@ -390,6 +390,8 @@ export default function HomeScreen() {
         <ThemedText type="title">C02 Баллоны</ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
+        <ThemedText type="title">{summBallon + 13.6}</ThemedText>
+
         <ThemedView style={styles.container}>
           <TextInput
             placeholder="Введите число"
@@ -399,8 +401,6 @@ export default function HomeScreen() {
             onChangeText={handleChangeText}
             style={styles.input}
           />
-
-          <ThemedText>{summBallon + 13.6}</ThemedText>
         </ThemedView>
       </ThemedView>
     </ParallaxScrollView>
