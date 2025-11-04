@@ -414,6 +414,9 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   stepContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
     gap: 8,
     marginBottom: 8,
   },
@@ -435,5 +438,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     paddingHorizontal: 8,
     fontSize: 16,
+    color: "white",
+    borderColor: "white",
   },
 });
