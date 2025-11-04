@@ -10,6 +10,7 @@ export default function HomeScreen() {
   const [value, setValue] = useState("");
 
   const [summBallon, setSummBallon] = useState(0);
+  const [chekBall, setChekBall] = useState(0);
 
   const handleChangeText = (text) => {
     // Ограничиваем длину введённого текста до трёх символов
@@ -20,7 +21,6 @@ export default function HomeScreen() {
       setValue(trimmedText);
     }
   };
-  const defolt = 13.6;
 
   const ballons = [
     { id: 4, value: 36.1, years: 25 },
@@ -374,6 +374,9 @@ export default function HomeScreen() {
     const result = ballons.find((t) =>
       t.id == value ? setSummBallon(t.value) : ""
     );
+    const resultchek = ballons.find((t) =>
+      t.id == value ? setChekBall(t.years) : ""
+    );
   }, [value]);
 
   return (
@@ -390,7 +393,15 @@ export default function HomeScreen() {
         <ThemedText type="title">C02 Баллоны</ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="title">{summBallon + 13.6}</ThemedText>
+        <ThemedText type="title" style={styles.titleContainerball}>
+          {summBallon}
+        </ThemedText>
+        <ThemedText type="title" style={styles.titleContainerVes}>
+          {summBallon + 13.6}
+        </ThemedText>
+        <ThemedText style={styles.titleContainer}>
+          Поверка в {chekBall} году
+        </ThemedText>
 
         <ThemedView style={styles.container}>
           <TextInput
@@ -413,6 +424,24 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 8,
   },
+  titleContainerVes: {
+    color: "green",
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+  },
+  titleContainerball: {
+    color: "yellow",
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+  },
+  titleContainerVes: {
+    color: "green",
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+  },
   stepContainer: {
     flex: 1,
     justifyContent: "center",
@@ -421,8 +450,8 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   reactLogo: {
-    height: 178,
-    width: 290,
+    width: "100%",
+    height: "100%",
     bottom: 0,
     left: 0,
     position: "absolute",
