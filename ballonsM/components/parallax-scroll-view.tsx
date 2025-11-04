@@ -11,8 +11,7 @@ import { ThemedView } from "@/components/themed-view";
 import { useColorScheme } from "@/hooks/use-color-scheme";
 import { useThemeColor } from "@/hooks/use-theme-color";
 
-const HEADER_HEIGHT = 150;
-const HEADER_WIDTH = 360;
+const HEADER_HEIGHT = 200;
 
 type Props = PropsWithChildren<{
   headerImage: ReactElement;
@@ -74,8 +73,9 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   header: {
+    marginTop: 50,
     height: HEADER_HEIGHT,
-    width: HEADER_WIDTH,
+    width: "100%",
     overflow: "hidden",
   },
   content: {

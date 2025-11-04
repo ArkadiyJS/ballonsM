@@ -422,6 +422,7 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: "row",
     alignItems: "center",
+    justifyContent: "center",
     gap: 8,
   },
   titleContainerVes: {
@@ -436,12 +437,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 8,
   },
-  titleContainerVes: {
-    color: "green",
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 8,
-  },
+
   stepContainer: {
     flex: 1,
     justifyContent: "center",
