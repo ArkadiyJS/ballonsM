@@ -370,13 +370,11 @@ export default function HomeScreen() {
     { id: 1, value: 15, years: 25 },
     { id: 1, value: 15, years: 25 },
   ];
+
   useEffect(() => {
-    const result = ballons.find((t) =>
-      t.id == value ? setSummBallon(t.value) : ""
-    );
-    const resultchek = ballons.find((t) =>
-      t.id == value ? setChekBall(t.years) : ""
-    );
+    ballons.find((t) => (t.id == value ? setSummBallon(t.value) : ""));
+    ballons.find((t) => (t.id == value ? setChekBall(t.years) : ""));
+    ``;
   }, [value]);
 
   return (
@@ -384,7 +382,7 @@ export default function HomeScreen() {
       headerBackgroundColor={{ light: "#A1CEDC", dark: "#1D3D47" }}
       headerImage={
         <Image
-          source={require("@/assets/images/partial-react-logo.png")}
+          source={require("@/assets/images/co2.jpg")}
           style={styles.reactLogo}
         />
       }
