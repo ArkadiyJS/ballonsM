@@ -348,7 +348,6 @@ export default function HomeScreen() {
   useEffect(() => {
     ballons.find((t) => (t.id == value ? setSummBallon(t.value) : ""));
     ballons.find((t) => (t.id == value ? setChekBall(t.years) : ""));
-    ``;
   }, [value]);
 
   return (
